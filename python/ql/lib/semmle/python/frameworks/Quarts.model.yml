@@ -1,0 +1,27 @@
+extensions:
+  - addsTo:
+      pack: codeql/python-all
+      extensible: sourceModel
+    data:
+      - ["quart", "Member[request].Member[args,headers,cookies,].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[args].DictionaryElementAny", "remote"]
+      - ["quart", "Member[request].Member[args].Member[get].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[get_json].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[headers].DictionaryElementAny", "remote"]
+      - ["quart", "Member[request].Member[headers].Member[get].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[cookies].DictionaryElementAny", "remote"]
+      - ["quart", "Member[request].Member[cookies].Member[get].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[files].DictionaryElementAny", "remote"]
+      - ["quart", "Member[request].Member[files].Member[get].ReturnValue", "remote"]
+      - ["quart", "Member[request].Member[form].DictionaryElementAny", "remote"]
+      - ["quart", "Member[request].Member[form].Member[get].ReturnValue", "remote"]
+
+  - addsTo:
+      pack: codeql/python-all
+      extensible: sinkModel
+    data: []
+
+  - addsTo:
+      pack: codeql/python-all
+      extensible: summaryModel
+    data: []
